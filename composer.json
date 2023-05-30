@@ -1,5 +1,5 @@
 {
-  "name": "jolszewski/exception-handling-bundle",
+  "name": "jan-olszewski-dev/exception-handling-bundle",
   "description": "Bundle to automatically deal with exceptions in symfony",
   "version": "0.0.1",
   "type": "symfony-bundle",
