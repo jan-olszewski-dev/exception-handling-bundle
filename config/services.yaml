@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Jolszewski\ExceptionHandlingBundle\:
+    resource: '../src/'
+    exclude:
+      - '../src/ExceptionHandlingBundle.php'
