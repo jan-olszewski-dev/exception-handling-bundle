@@ -29,7 +29,7 @@ class ExceptionListener
 
     private function logHttpException(HttpExceptionInterface $throwable): void
     {
-        $this->logger->debug($throwable->getMessage(), [
+        $this->logger->error($throwable->getMessage(), [
             'status' => $throwable->getStatusCode(),
             'trace' => $throwable->getTrace(),
         ]);
@@ -39,7 +39,7 @@ class ExceptionListener
     {
         /** @var ExceptionRedirecting $contextException */
         $contextException = $event->getThrowable();
-        $this->logger->debug($contextException->getMessage());
+        $this->logger->error($contextException->getMessage());
         $route = $this->router->generate($contextException->getRoute(), $contextException->getParameters());
         $redirect = new RedirectResponse($route);
         $event->setResponse($redirect);
