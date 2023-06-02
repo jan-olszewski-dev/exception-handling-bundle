@@ -1,7 +1,7 @@
 {
   "name": "jan-olszewski-dev/exception-handling-bundle",
   "description": "Bundle to automatically deal with exceptions in symfony",
-  "version": "0.1",
+  "version": "1.0",
   "type": "symfony-bundle",
   "license": "MIT",
   "require": {
