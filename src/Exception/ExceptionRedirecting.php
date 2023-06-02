@@ -2,10 +2,13 @@
 
 namespace Jolszewski\ExceptionHandlingBundle\Exception;
 
-final class ExceptionRedirecting extends \RuntimeException
+final class ExceptionRedirecting extends \RuntimeException implements ExceptionRedirectingInterface
 {
-    public function __construct(string $message, private readonly ?string $route = null, private readonly array $parameters = [])
-    {
+    public function __construct(
+        string $message,
+        private readonly ?string $route = null,
+        private readonly array $parameters = []
+    ) {
         parent::__construct($message);
     }
 
