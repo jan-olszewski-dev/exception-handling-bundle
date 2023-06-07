@@ -62,7 +62,7 @@ class ExceptionListener
     private function getThrowableContext(\Throwable $throwable): array
     {
         return [
-            'trace' => $throwable->getTrace(),
+            'trace' => $throwable->getTraceAsString(),
             'file' => $throwable->getFile(),
             'line' => $throwable->getLine(),
         ];
